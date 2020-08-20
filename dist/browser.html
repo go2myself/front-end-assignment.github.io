@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset=UTF-8><title>Brower introduction - By LeLe</title><link rel=stylesheet href=https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=https://cdn.staticfile.org/prism/1.15.0/themes/prism.min.css><link rel=stylesheet href=https://cdn.staticfile.org/KaTeX/0.10.0-rc.1/katex.min.css><link href=./css/chunk-vendors.4e4765ff.css rel=stylesheet></head><body><div><article id=webslides><section slide class="slide bg-black-blue aligncenter" image="https://source.unsplash.com/C1HhAQrbykQ/ .dark"><span class="background dark" style="background-image:url('https://source.unsplash.com/C1HhAQrbykQ/')"></span><div class=wrap wrap=true><h1 class="text-landing text-shadow">Brower introduction</h1><p class=text-intro>By LeLe</p><p><a href=https://github.com/ksky521/nodeppt class="button ghost" target=_blank><i class="fa fa-github"></i> Github</a></p></div></section><section slide class=slide image="https://source.unsplash.com/UJbHNoVPZW0/ .dark"><span class="background dark" style="background-image:url('https://source.unsplash.com/UJbHNoVPZW0/')"></span><div class=wrap wrap=true><h2>你好</h2></div></section><section slide class=slide image="https://source.unsplash.com/UJbHNoVPZW0/ .dark"><span class="background dark" style="background-image:url('https://source.unsplash.com/UJbHNoVPZW0/')"></span><div class=wrap wrap=true><h3>你好2</h3></div></section><section slide class=slide image="https://source.unsplash.com/UJbHNoVPZW0/ .dark"><span class="background dark" style="background-image:url('https://source.unsplash.com/UJbHNoVPZW0/')"></span><div class=wrap wrap=true><h4>你好3</h4></div></section><section slide class="slide bg-black aligncenter" image="https://source.unsplash.com/n9WPPWiPPJw/ .anim"><span class="background anim" style="background-image:url('https://source.unsplash.com/n9WPPWiPPJw/')"></span><div class=wrap wrap=true><p>样式测试1</p></div></section><section slide class=slide image="https://source.unsplash.com/UJbHNoVPZW0/ .light"><span class="background light" style="background-image:url('https://source.unsplash.com/UJbHNoVPZW0/')"></span><div class=wrap wrap=true><p>样式测试2</p></div></section></article></div><script src=https://cdn.staticfile.org/echarts/4.8.0/echarts.min.js></script><script>window.pluginsOptions = {}
+
+
+
+    window.webslidesOptions = {}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let isPrintMode = false;
+    if(~location.search.indexOf('print-pdf')){
+        isPrintMode = true;
+        WebSlides.registerPlugin('scroll', function(){});
+    }
+    const wsOptions = {
+        loop: false
+    };
+    if(window.webslidesOptions){
+        for (let i in webslidesOptions){
+            if(webslidesOptions.hasOwnProperty(i)){
+                wsOptions[i] = webslidesOptions[i];
+            }
+        }
+    }
+    const ws = new WebSlides(wsOptions)
+
+    window.wsInstance = ws;
+    if(isPrintMode){
+        ws.slides.forEach(s=>s.show())
+    }
+}, false)</script><script src=./js/chunk-vendors.js></script><script src=./js/browser.js></script></body></html>
